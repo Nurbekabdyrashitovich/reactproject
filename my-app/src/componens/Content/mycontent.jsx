@@ -1,14 +1,16 @@
+import React from 'react';
 import c from './mycontent.module.css';
-import MyPost from './MyPosts/MyPost';
+import MyPosts from './MyPosts/MyPosts';
 
 const Content=()=>{
     return(
-      <div className={c.content}>
-        <img src="http://zviazda.by/sites/default/files/field/image/30-6_kopiya_3.jpg" alt="why" srcset="" />
-        <div className={c.item}>
+      
+      <div>
+        <img src="http://zviazda.by/sites/default/files/field/image/30-6_kopiya_3.jpg" />
+        <div >
           <a>Post</a>
         </div>
-        <MyPost />
+        <MyPosts />
       </div>
     
     )

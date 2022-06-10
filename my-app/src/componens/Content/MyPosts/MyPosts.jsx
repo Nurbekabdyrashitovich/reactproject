@@ -1,14 +1,15 @@
-import React from 'react'
-import c from './MyPost.module.css';
+import React from 'react';
+import c from './MyPosts.module.css';
 import Post from './Post/Post';
 
-const MyPost=()=>{
+const MyPosts=()=>{
     return(
       <div>
         <div>
           <textarea></textarea>
           <button>add post</button>
         </div>
+
         <div className={c.posts}>
           <Post message ='hi how are you' why='hello'/>
           <Post />
@@ -20,4 +21,4 @@ const MyPost=()=>{
     
     )
 }
-export default MyPost;
+export default MyPosts;

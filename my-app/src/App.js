@@ -1,20 +1,31 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Header from './componens/Header/Header.jsx';
-import Nav from './componens/Nav/Nav';
+import Header from './componens/Header/Header';
+import Navbar from './componens/Navbar/Navbar';
 import Content from './componens/Content/mycontent';
+import Dialogs from './componens/Dialogs/dialogs';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
-function App() {
+
+function App () {
   return (
-    <div className="Appwrapper">
-      <Header />
-      <Nav />
-      <Content/>
+    <BrowserRouter>
 
-      
-      
-    </div>
+      <div className="app-wrapper">
+        <Header />
+        <Navbar />
+        <div className='app-wrapper-content'>
+          <Routes>
+            <Route path="/dialogs" element={<Dialogs />} />
+            <Route path="/mycontent" element={<Content />} />
+           
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
 export default App;
+
