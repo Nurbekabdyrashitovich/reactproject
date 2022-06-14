@@ -3,7 +3,7 @@ import c from './mycontent.module.css';
 import MyPosts from './MyPosts/MyPosts';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 
-const Content=()=>{
+const Content=(props)=>{
     return(
       
       <div>
