@@ -6,11 +6,12 @@ import Navbar from './componens/Navbar/Navbar';
 import Content from './componens/Content/mycontent';
 import Dialogs from './componens/Dialogs/dialogs';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import state, { addPost } from './redux/state';
 
-
-function App (props) {
+const App = (props)=> {
+  
   return (
-    <BrowserRouter>
+    // <BrowserRouter>
 
       <div className="app-wrapper">
         <Header />
@@ -19,13 +20,15 @@ function App (props) {
           <Routes>
             
 
-             <Route path="/dialogs" element={<Dialogs dialogs ={props.dialogs} messeges={props.messeges}/>} />
-            <Route path="/mycontent" element={<Content />} /> 
+             <Route path="/dialogs" element={<Dialogs
+                 dialogs ={props.dialogs}
+                 messeges={props.messeges}/>} />
+             <Route path="/mycontent" element={<Content posts={props.posts}  addPost={props.addPost}/>} /> 
            
           </Routes>
         </div>
       </div>
-    </BrowserRouter>
+    // </BrowserRouter>
   );
 }
 

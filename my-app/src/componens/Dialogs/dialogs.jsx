@@ -42,11 +42,9 @@ const Dialogs =(props)=>{
 
     
 
-    let dialogsElements=props.dialogs
-    .map(d=><DialogItem name={d.name} id={d.id}/>);
+    let dialogsElements=props.dialogs.map(d=><DialogItem name={d.name} id={d.id}/>);
 
-    let messegesElement=props.messeges
-    .map(m=><Messege messege={m.messege}/>)
+    let messegesElement=props.messeges.map(m=><Messege messege={m.messege}/>)
        
     
     return(
@@ -55,8 +53,8 @@ const Dialogs =(props)=>{
 
             {dialogsElements}
 
-            <DialogItem/>
-            <Messege/>
+            {/* <DialogItem/> */}
+            {/* <Messege/> */}
             
 
              {/* <DialogItem name={dialogsData[0].name} id={dialogsData[0].id}/>

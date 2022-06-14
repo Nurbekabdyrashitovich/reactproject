@@ -1,4 +1,4 @@
-
+import React from 'react';
 import c from './Post.module.css';
 
 const Post=(props)=>{
